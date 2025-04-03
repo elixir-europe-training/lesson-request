@@ -21,28 +21,31 @@ body:
       placeholder: e.g. Bioschemas for dummies
     validations:
       required: true
-  - type: input
-    id: draft
-    attributes:
-      label: 2. Existing materials
-      description: |
-        Do you already have a repository with the materials? If yes, please provide it here:
-      placeholder: e.g. https://github.com/yourname/yourrepo
-    validations:
-      required: false
-  - type: markdown
-    attributes:
-      value: |
-        If you answered "No" to part 2, you can skip to question 4.
   - type: checkboxes
     id: existing-terms
     attributes:
-      label: 3. Requirements for existing materials
+      label: 2a. Existing materials
       description: Are your materials already on GitHub and do they use (one of the) ELIXIR lesson templates?
       options:
         - label: yes, and please transfer it to the `elixir-europe-training` organisation
         - label: no, I need a new repository in the `elixir-europe-training` organisation
-  - type: textarea
+  - type: input
+    id: draft
+    attributes:
+      label: 2b. Existing materials
+      description: |
+        If you answered 'yes' above, please provide the url to repository:
+      placeholder: e.g. https://github.com/yourname/yourrepo
+    validations:
+      required: false
+  - type: input
+    id: entities
+    attributes:
+      label: 3. ELIXIR entity
+      description: |
+        Which ELIXIR entity (e.g. Platform, Community, Project) is supporting your lesson? You can specify multiple.
+      placeholder: e.g. Interoperability platform, biodiversity community
+  - type: input
     id: maintainers
     attributes:
       label: 4. Other maintainers
