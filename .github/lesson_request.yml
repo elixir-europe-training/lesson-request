@@ -1,0 +1,64 @@
+name: Request a lesson
+description: This form is for requesting adding or transferring a lesson in an ELIXIR lesson template to the [ELIXIR training organization](https://github.com/elixir-europe-training/)
+title: "[Request]: "
+labels: ["request"]
+assignees:
+  - geertvangeest
+  - abotzki
+  - ac812
+body:
+  - type: markdown
+    attributes:
+      value: |
+        It's great that you're considering to develop a lesson with and for ELIXIR. 
+        In order to make sure our lessons adhere to some minimal quality requirements, and to support collaboration, we need to evaluate your request.
+        Please fill out those questions to get the request started. After submitting the issue, a member of the lesson template editorial board will contact you soon. 
+  - type: input
+    id: topic
+    attributes:
+      label: 1. Lesson topic
+      description: What is the topic of your lesson?
+      placeholder: e.g. Bioschemas for dummies
+    validations:
+      required: true
+  - type: input
+    id: draft
+    attributes:
+      label: 2. Existing materials
+      description: |
+        Do you already have a repository with the materials? If yes, please provide it here:
+      placeholder: e.g. https://github.com/yourname/yourrepo
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        If you answered "No" to part 2, you can skip to question 4.
+  - type: checkboxes
+    id: existing-terms
+    attributes:
+      label: 3. Requirements for existing materials
+      description: Are your materials already on GitHub and do they use (one of the) ELIXIR lesson templates?
+      options:
+        - label: yes, and please transfer it to the `elixir-europe-training` organisation
+        - label: no, I need a new repository in the `elixir-europe-training` organisation
+  - type: textarea
+    id: maintainers
+    attributes:
+      label: 4. Other maintainers
+      description: |
+        Please list the GitHub handles for people who should have [maintain permissions](https://help.github.com/en/articles/repository-permission-levels-for-an-organization) to your lesson. 
+        We can always add collaborators later.
+      placeholder: e.g. @ac812, @abotzki
+  - type: textarea
+    id: questions
+    attributes:
+      label: 5. Other questions
+      description: |
+        Is there any other information you would like us to have, or any other questions you have for us?
+      placeholder: e.g. I need to update to latest template version first
+  - type: markdown
+    attributes:
+      value: |
+        Thanks!
+      
