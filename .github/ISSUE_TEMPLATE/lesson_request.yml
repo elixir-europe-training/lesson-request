@@ -1,4 +1,4 @@
-name: Request a lesson
+name: Issue to request an ELIXIR lesson
 description: This form is for requesting adding or transferring a lesson in an ELIXIR lesson template to the [ELIXIR training organization](https://github.com/elixir-europe-training/)
 title: "[Request]: "
 labels: ["request"]
@@ -10,9 +10,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        It's great that you're considering to develop a lesson with and for ELIXIR. 
-        In order to make sure our lessons adhere to some minimal quality requirements, and to support collaboration, we need to evaluate your request.
-        Please fill out those questions to get the request started. After submitting the issue, a member of the lesson template editorial board will contact you soon. 
+        It's great that you're considering to develop a lesson with and for ELIXIR. All lessons that are developed using the ELIXIR Lesson Template and hosted in the [ELIXIR Training GitHub organisation](https://github.com/elixir-europe-training/) require some checks on minimal requireements. Please fill out those questions to get the request started. After submitting the issue, a member of the lesson template editorial board will contact you soon. 
   - type: input
     id: topic
     attributes:
@@ -43,7 +41,7 @@ body:
     attributes:
       label: 3. ELIXIR entity
       description: |
-        Which ELIXIR entity (e.g. Platform, Community, Project) is supporting your lesson? You can specify multiple.
+        Which ELIXIR entity (e.g. Platform, Community, Project or Node) is supporting your lesson? You can specify multiple.
       placeholder: e.g. Interoperability platform, biodiversity community
   - type: input
     id: maintainers
